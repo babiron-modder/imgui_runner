@@ -1,14 +1,14 @@
 # imgui runner
 ## 動機
-PythonでGuiをお手軽に作りたい
-↓
-Dear PyGuiがあるけど、日本語入力が以上に重い
-本家C++のImGuiの方がいろいろ優れている気がする
-↓
-本家をPythonから呼び出せるようにすればいいんじゃね？
+- PythonでGuiをお手軽に作りたい
+- →Dear PyGuiがあるけど、日本語入力が以上に重い
+- →本家C++のImGuiの方がいろいろ優れている気がする
+- →本家をPythonから呼び出せるようにすればいいんじゃね？
 
 ## できたもの
-C++でImGuiを作り、そこからPythonを起動して、MemoryMappedFileをつかってPythonと情報をやり取りする
+C++でImGuiを作り、そこからPythonを起動して、MemoryMappedFileをつかってPythonと情報をやり取りする感じ。
+
+とりあえず動いてるし、よし
 
 ## ひどいところ
 - [ ] マルチバイトのやり取りができない。
