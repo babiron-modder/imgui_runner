@@ -40,4 +40,5 @@ add_executable(
 # glfwのリンクの設定
 target_link_libraries(run PUBLIC libglfw3dll.a)
 target_link_libraries(run PUBLIC glfw3.dll)
+target_link_libraries(run PUBLIC imm32.lib)
 
