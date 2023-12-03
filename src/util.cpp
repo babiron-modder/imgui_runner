@@ -437,7 +437,10 @@ namespace imgui_ex{
                 }else if(tag=="InputText"){
                     if(inputs.count(property["var"])==0){
                         inputs[property["var"]]=new char[1024];
-                        _snprintf(inputs[property["var"]], sizeof(inputs[property["var"]]), "%s", property["value"].c_str());
+                        _snprintf(inputs[property["var"]], 1024, "%s", property["value"].c_str());
+                    }
+                    if(property["sync"]=="true"){
+                        _snprintf(inputs[property["var"]], 1024, "%s", property["value"].c_str());
                     }
                     ImGui::InputText(property["id"].c_str(),inputs[property["var"]], 1024);
                     tmp_variable+="\""+property["var"]+"\":\""+inputs[property["var"]]+"\",";
