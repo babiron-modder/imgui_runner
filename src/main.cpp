@@ -76,6 +76,10 @@ int main(int argc, char* argv[]) {
         if (ImGui::BeginMenu("\uf85b ")) {
             if (ImGui::MenuItem("実行ファイルを選択する           ")) {
                 file_select_window_is_shown = true;
+                
+                files.clear();
+                files.shrink_to_fit();
+                files = getFoldersAndFiles(program_folder_path);
             }
             ImGui::EndMenu();
         }

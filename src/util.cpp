@@ -3,7 +3,7 @@
 std::string wstringToString(std::wstring wstr_in) {
     int arrsize = (wstr_in.size() + 1) * 3 + 1;
     char* chr_out = new char[arrsize];
-    WideCharToMultiByte(CP_ACP, 0, wstr_in.c_str(), wstr_in.size() + 1, chr_out, arrsize, NULL, 0);
+    WideCharToMultiByte(CP_UTF8, 0, wstr_in.c_str(), wstr_in.size() + 1, chr_out, arrsize, NULL, 0);
     std::string str_out(chr_out);
     delete chr_out;
     return str_out;
